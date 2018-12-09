@@ -1,0 +1,102 @@
+* {box-sizing: border-box;}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600|Roboto:400,400i,700');
+
+
+a:link {
+    text-decoration: none;
+}
+
+.menu-container {
+    position: absolute;
+    cursor: pointer;
+    padding: 10px;
+    width: 60px;
+    height:60px;
+    left: 80%;
+    top: 5%;
+    z-index: 10;
+}
+
+.bar1, .bar3 {
+    width: 36px;
+    height: 4px;
+    background-color: #FF4470;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.bar2 {
+    width: 24px;
+    height: 4px;
+    margin: 6px 0 6px 10px;
+    background-color:#FF4470;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    transform: rotate(-45deg) translate(-8px, 6px);
+    background-color:#fff;
+}
+
+.change .bar2 {
+    opacity: 0; 
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-8px, -6px);
+    background-color:#fff;
+}
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see main.js) */    
+    height: 0;
+    width: 100%;
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color:#FF4470;
+    /* background-color: rgba(0,0,0, 0.9); */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+}
+
+/* The navigation links inside the overlay */
+.overlay li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 64px;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    margin-bottom: 24px;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */  
+}
+
+.overlay a:link, .overlay a:visited  {
+    color: #fff;
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color:#661b2c;
+}
+
+
+
+
